@@ -15,23 +15,26 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 public class ContactFragment extends Fragment {
-    List<ContactModel> contactModels = new ArrayList<>();
-    View view;
-    RecyclerView recyclerView;
+    private List<ContactModel> contactModels = new ArrayList<>();
+    private RecyclerView recyclerView;
 
     public ContactFragment() {
+
     }
 
-    @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        view = inflater.inflate(R.layout.contact_fragment, container, false);
+        return inflater.inflate(R.layout.contact_fragment, container, false);
+    }
 
+    @Override
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
+        super.onViewCreated(view, savedInstanceState);
         recyclerView = view.findViewById(R.id.rvid);
+
         RecyclerViewAdapter recyclerViewAdapter = new RecyclerViewAdapter(getContext(), contactModels);
         recyclerView.setLayoutManager(new LinearLayoutManager(getActivity()));
         recyclerView.setAdapter(recyclerViewAdapter);
-        return view;
     }
 
     @Override
@@ -40,7 +43,7 @@ public class ContactFragment extends Fragment {
         contactModels.add(new ContactModel("Unknown", "01711431210", R.drawable.contact));
         contactModels.add(new ContactModel("Unknown", "+880 1711-431210", R.drawable.contact));
         contactModels.add(new ContactModel("Unknown", "+880 1711-431210", R.drawable.contact));
-        contactModels.add(new ContactModel("Towfiq", "+880 1521 431210", R.drawable.towfiq));
+        contactModels.add(new ContactModel("Towfiq", "01521431210", R.drawable.towfiq));
         contactModels.add(new ContactModel("Abrar", "+880 1616-465609", R.drawable.abrar));
         contactModels.add(new ContactModel("Rizon", "+880 1676-663311", R.drawable.rizon));
         contactModels.add(new ContactModel("Unknown", "+880 1711-431210", R.drawable.contact));

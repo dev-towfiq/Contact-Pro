@@ -3,6 +3,7 @@
     package="com.towfiq.contactpro">
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/contact"
@@ -10,6 +11,7 @@
         android:roundIcon="@drawable/contact"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

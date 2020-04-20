@@ -28,6 +28,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     List<ContactModel> mData;
     Dialog dialog;
     CallInterface callInterface;
+
     public RecyclerViewAdapter(Context context, List<ContactModel> mData) {
         this.context = context;
         this.mData = mData;
@@ -38,8 +39,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.item_view_layout, parent, false);
         final MyViewHolder myViewHolder = new MyViewHolder(view);
-        //Dialog ini
-        dialog=new Dialog(context);
+        //Dialog init
+        dialog = new Dialog(context);
         dialog.setContentView(R.layout.dialog_layout);
         dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
 
@@ -47,10 +48,10 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         myViewHolder.button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String phnNumber=mData.get(myViewHolder.getAdapterPosition()).getNumber();
+                String phnNumber = mData.get(myViewHolder.getAdapterPosition()).getNumber();
                 callInterface = (CallInterface) context;
                 callInterface.callBtn(phnNumber);
-                Log.e(TAG, "onClick: ");
+//                Log.e(TAG, "onClick: ");
                 Toast.makeText(context, phnNumber, Toast.LENGTH_SHORT).show();
             }
         });
@@ -97,7 +98,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             name = itemView.findViewById(R.id.nameID);
             number = itemView.findViewById(R.id.numberID);
             image = itemView.findViewById(R.id.imageID);
-            relativeLayout=itemView.findViewById(R.id.child_layout_id);
+            relativeLayout = itemView.findViewById(R.id.child_layout_id);
             button = itemView.findViewById(R.id.call_icon_ID);
         }
     }
