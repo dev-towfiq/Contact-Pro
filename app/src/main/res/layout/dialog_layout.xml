@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:paddingTop="8dp"
+    android:focusable="true"
+    android:clickable="true"
+   >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:paddingBottom="20dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialog_name_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Contact Name"
+            android:textColor="#000"
+            android:textSize="24sp"
+            />
+
+        <TextView
+            android:id="@+id/dialog_phone_id"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:text="Phone Number"
+            android:textColor="#000"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"/>
+        <Button
+            android:id="@+id/dialog_btn_call_id"
+            android:padding="10dp"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Make A Call"
+            android:drawableLeft="@drawable/ic_call"
+            android:drawablePadding="15dp"
+            android:background="#000"
+            android:textColor="#fff"
+            android:layout_margin="10dp"/>
+        <Button
+            android:id="@+id/dialog_btn_message_id"
+            android:padding="10dp"
+            android:textAlignment="textStart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send Message"
+            android:drawableLeft="@drawable/ic_message"
+            android:drawablePadding="15dp"
+            android:background="#000"
+            android:textColor="#fff"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"/>
+    </LinearLayout>
+    <com.mikhaellopez.circularimageview.CircularImageView
+        android:id="@+id/dialog_img_id"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:src="@drawable/contact"
+        android:scaleType="fitCenter"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        />
+
+</RelativeLayout>

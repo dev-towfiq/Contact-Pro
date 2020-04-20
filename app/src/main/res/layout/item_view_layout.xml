@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/child_layout_id"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:focusable="true"
+    android:clickable="true"
+    android:background="?android:selectableItemBackground">
+    <ImageView
+        android:id="@+id/imageID"
+        android:src="@drawable/contact"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="25dp"
+        android:layout_centerVertical="true"
+        />
+    <TextView
+        android:id="@+id/nameID"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Towfiq"
+        android:layout_toRightOf="@+id/imageID"
+        />
+    <TextView
+        android:id="@+id/numberID"
+        android:textSize="18sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="+880 1521-431210"
+        android:layout_toRightOf="@+id/imageID"
+        android:layout_below="@+id/nameID"
+        />
+    <ImageButton
+        android:id="@+id/call_icon_ID"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="?attr/selectableItemBackground"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_margin="2dp"
+        android:src="@drawable/ic_call_yellow"
+        android:layout_alignParentEnd="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="15dp">
+    </ImageButton>
+</RelativeLayout>
+
+
+
